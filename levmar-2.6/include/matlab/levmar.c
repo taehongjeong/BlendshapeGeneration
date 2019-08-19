@@ -172,7 +172,7 @@ register int i;
 int ret=0;
 double *mp;
 
-  mexSetTrapFlag(1); /* handle errors in the MEX-file */
+  // mexSetTrapFlag(1); /* handle errors in the MEX-file */
 
   mp=mxGetPr(dat->rhs[0]);
   for(i=0; i<m; ++i)
@@ -213,7 +213,7 @@ double *mp;
     mxDestroyArray(lhs[0]);
   }
 
-  mexSetTrapFlag(0); /* on error terminate the MEX-file and return control to the MATLAB prompt */
+  // mexSetTrapFlag(0); /* on error terminate the MEX-file and return control to the MATLAB prompt */
 
   return ret;
 }
